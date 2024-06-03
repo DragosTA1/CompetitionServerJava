@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/CompetitionSockets" />
+        <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/CompetitionSockets" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionClient" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionClientFX" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionModel" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionNetworking" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionPersistence" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionServer" />
+            <option value="$PROJECT_DIR$/CompetitionSockets/CompetitionServices" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

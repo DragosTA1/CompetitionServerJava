@@ -1,0 +1,9 @@
+rootProject.name = 'CompetitionSockets'
+include 'CompetitionClient'
+include 'CompetitionModel'
+include 'CompetitionNetworking'
+include 'CompetitionPersistence'
+include 'CompetitionServer'
+include 'CompetitionServices'
+include 'CompetitionClientFX'
+

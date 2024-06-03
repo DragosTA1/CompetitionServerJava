@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'application'
+}
+
+group = 'ro.mpp2024'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://nexus.gluonhq.com/nexus/content/repositories/releases/"
+    }
+}
+
+dependencies {
+    implementation project(path: ':')
+    implementation project(path: ':')
+    implementation project(path: ':CompetitionModel')
+    implementation project(path: ':CompetitionPersistence')
+    implementation project(path: ':CompetitionServer')
+    implementation project(path: ':CompetitionServices')
+    implementation project(path: ':CompetitionNetworking')
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'com.google.errorprone', name: 'error_prone_annotations', version: '2.4.0'
+}
+
+javafx {
+    version = '21-ea+24'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+application {
+//    mainModule = 'ro.mpp2024'
+    mainClass = 'ro.mpp2024.UI.Apps.HelloApplication'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+test {
+    useJUnitPlatform()
+}

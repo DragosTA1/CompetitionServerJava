@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Font?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom, #add8e6, #90ee90);" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <!-- Groups Section -->
+      <VBox alignment="CENTER_LEFT" prefWidth="244.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Grupe" />
+            <TableView fx:id="groupsTableView" prefHeight="125.0" prefWidth="500.0">
+               <columns>
+                  <TableColumn fx:id="minimumAgeColumn" prefWidth="250.0" text="C1" />
+                  <TableColumn fx:id="maximumAgeColumn" prefWidth="250.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+
+      <!-- Probe Section -->
+      <VBox prefWidth="151.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Probe" />
+            <TableView fx:id="contestsTableView" prefHeight="175.0" prefWidth="500.0">
+               <columns>
+                  <TableColumn fx:id="typeColumn" prefWidth="400.0" text="C1" />
+                  <TableColumn fx:id="contestParticipationCountColumn" prefWidth="100.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+
+      <!-- Participants Section -->
+      <VBox prefWidth="311.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0">
+               <Button fx:id="searchContestantsButton" mnemonicParsing="false" onAction="#onSearchContestantsButtonClick" text="Cauta participanti" />
+               <Button fx:id="registerContestantButton" mnemonicParsing="false" onAction="#onRegisterContestantButtonClick" text="Inscrie participant" />
+            </HBox>
+            <Label fx:id="Participant" style="-fx-font-style: bold" text="Participanti">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TableView fx:id="contestantsTableView" prefHeight="320.0" prefWidth="309.0">
+               <columns>
+                  <TableColumn fx:id="ageColumn" prefWidth="125.0" text="C1" />
+                  <TableColumn fx:id="nameColumn" prefWidth="125.0" text="C2" />
+                  <TableColumn fx:id="cnpColumn" prefWidth="125.0" text="C3" />
+                  <TableColumn fx:id="participationCountColumn" prefWidth="125.0" text="C4" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+
+      <!-- Logout Section -->
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="20.0" prefWidth="706.0">
+         <Label fx:id="userLabel" style="-fx-font-style: bold" text="user" />
+         <Button mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" />
+      </HBox>
+   </children>
+</VBox>
